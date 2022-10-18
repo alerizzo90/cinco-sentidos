@@ -1,5 +1,5 @@
-const menu = (props) => {
+const Menu = (props) => {
     return (<li>{props.item}</li>)
 }
 
-export default menu;
+export default Menu;
