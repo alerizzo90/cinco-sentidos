@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
+import menu from './componentes/menu';
 
 function App() {
   return (
@@ -8,9 +9,7 @@ function App() {
         <img src={"./logo192.png"} className="header__logo" alt="logo" />
         <div className="header__nav">
           <ul className='header__nav__menu'>
-            <li>Tienda holistica</li>
-            <li>Deco</li>
-            <li>Regaleria</li>
+            <lista menu= "Tienda holistica"/>
           </ul>
         </div>
         <div className='header__buttons'>
@@ -18,6 +17,7 @@ function App() {
         </div>
         <h1>cinco sentidos</h1>
       </header>
+      
     </div>
   );
 }
