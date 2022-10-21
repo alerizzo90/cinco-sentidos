@@ -1,9 +1,10 @@
 import Menu from "./Menu";
+import CartWidget from "./CartWidget";
 
 const NavBar = (props) => {
     return (
         <header className="header">
-        <img src={"./logo192.png"} className="header__logo" alt="logo" />
+          <img src={"./logo cs.png"} className="header__logo" alt="logo" />
         <div className="header__nav">
           <ul className='header__nav__menu'>
             <Menu item = "Tienda holistica"/>
@@ -11,9 +12,7 @@ const NavBar = (props) => {
             <Menu item = "Regaleria"></Menu>
           </ul>
         </div>
-        <div className='header__buttons'>
-          <button>carrito</button>
-        </div>
+        <CartWidget/>
         <h1>cinco sentidos</h1>
       </header>)
 }
