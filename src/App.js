@@ -1,16 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
-import NavBar from './components/NavBar';
-import AppContainer from './components/AppContainer';
-import ItemListContainer from './components/ItemListContainer';
+import { Category } from './page/Category';
+import { Home } from './page/Home';
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar/> 
-      <ItemListContainer
-      greeting = "Bienvenidos a Cinco Sentidos"
-      />
-      <AppContainer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path = {"/"} element = {<Home/>} />
+          <Route path = {"/category/:categoryId"} element = {<Category/>} />
+
+        </Routes>
+      
+      </BrowserRouter>
+
+
     </div>
   );
 }
