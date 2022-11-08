@@ -1,21 +1,36 @@
 import Item from "./Item";
+import { useEffect, useState } from "react";
+import { getProducts } from "../api/products";
+import { useParams } from "react-router-dom";
 
 const AppContainer = () => {
+    const {categoryId} = useParams();
+    const [productos, setProductos] = useState ([])
+    const [loading, setLoading] = useState (true)
+    useEffect (()=> {
+        getProducts()
+            .then (items => {setProductos (items); setLoading (false);})
+
+    }, [categoryId])
     return (
         <div className="products">
-            <Item
-            imagen = "https://grupoutopia.com.ar/storage/media/d694ea80d25b03aa7c001ed0de2b5b16ec537b64.jpeg" 
-            precio = "$500"   
-            nombre = "Sahumerios"
-            categoria = "Tienda Holistica"
-            />
+            {loading ? <span>Cargando...</span> : null}
+            
+            {productos.map ((producto)=> {
+                return(
+                    <Item
+                    key={producto.id}
+                    id ={producto.id}
+                    imagen={producto.imagen}
+                    precio={producto.precio}
+                    nombre={producto.nombre}
+                    categoria={producto.categoria}
+                    />
+                )
+            })}
 
-            <Item
-            imagen = "https://www.regalosparaminovio-paraminovia.com/wp-content/uploads/2020/04/cascada-de-humo.jpg" 
-            precio = "$800"   
-            nombre = "Cascada de humo"
-            categoria = "Tienda Holistica"
-            />
+
+
         </div>
 
         

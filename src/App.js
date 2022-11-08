@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import { Category } from './page/Category';
 import { Home } from './page/Home';
+import { Detail } from "./page/Detail";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path = {"/"} element = {<Home/>} />
           <Route path = {"/category/:categoryId"} element = {<Category/>} />
+          <Route path = {"/product/:productId"} element = {<Detail/>} />
 
         </Routes>
       
