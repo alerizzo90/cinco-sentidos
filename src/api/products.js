@@ -12,7 +12,22 @@ const products = [
         nombre : "Cascada de humo",
         categoria : "TiendaHolistica",
         id: 2,
+    } ,   
+    {
+      imagen : "https://i0.wp.com/www.puntoled.com.ar/wp-content/uploads/2021/01/HUMIDIFICADOR-300-Ml.png?fit=1000%2C1000&ssl=1", 
+      precio : "$2000",  
+      nombre : "Humidificador Simil Madera",
+      categoria : "Deco",
+      id: 3,
+    },
+    {
+      imagen : "https://d3ugyf2ht6aenh.cloudfront.net/stores/741/031/products/tazas1-8e687a97c5240396b516228170144940-1024-1024.jpg", 
+      precio : "$2000",  
+      nombre : "Tazas",
+      categoria : "Regaleria",
+      id: 4,
     }
+
 
 
 ];

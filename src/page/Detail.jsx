@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams, redirect } from "react-router-dom"
+import { useParams, } from "react-router-dom"
 import { getProduct } from "../api/products"
 import { UserLayout } from "../components/UserLayout"
 
@@ -9,6 +9,12 @@ export const Detail= () => {
     useEffect (()=>{
         getProduct(productId). then ((data) => setProduct (data))
     },[productId])
-    return <UserLayout>{product?.nombre}</UserLayout>
+    return <UserLayout>
+                <div>
+                    <p>{product.nombre}</p>
+                    <p><img src={product.imagen} alt="tienda" /></p>
+                    <p>{product.precio}</p>
+                </div>
+            </UserLayout>
 
 };
